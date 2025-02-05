@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)file:///C:/Users/luiza/OneDrive/Desktop/documentos/python/index.html -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site da  Malu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .button {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 25px;
+            font-size: 16px;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .tia-gisa { background-color: #ff5733; }
+        .tia-nika { background-color: #33c1ff; }
+        .Tonho { background-color: #33ff57; }
+        .Dudinha { background-color: #ff33a8; }
+        .Carol { background-color: #c2ff33; }
+        .message {
+            display: none;
+            margin-top: 10px;
+        }
+        .error {
+            color: rgb(166, 255, 0);
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Obrigado por abrir meu site-simples💖</h1>
+    <p>Eu amo muito vocês.</p>
+    <p>Queridos familiares,</p>
+    <p>Gostaria de expressar todo o meu carinho e gratidão por tudo que vocês fazem,  por sempre me darem apoio em tudo que faço!</p>
+    <p><strong>Não vale abrir para saber a mensagem dos outros em!</strong></p>
+    <a href="file:///C:/Users/luiza/OneDrive/Desktop/documentos/python/index.html#" class="button tia-gisa" data-message="tia-gisa-message">Tia Gisa</a>
+    <p id="tia-gisa-message" class="message">🌸 Tia Gisa, Como eu amo a senhora, obrigada por tudo minha madrinha, ciumenta, carinhosa, por sempre cuuidar de mim com muito
+        carinho, pode contar comigo pro que precisar tia. Eu amo muito a senhora! 💖</p>
+    <a href="file:///C:/Users/luiza/OneDrive/Desktop/documentos/python/index.html#" class="button tia-nika" data-message="tia-nika-message">Tia Nika</a>
+    <p id="tia-nika-message" class="message">🌸 Tia Nika, Obrigada por tudo que a senhora faz e fez por mim, por tantos conselhos, carinho, abraços, beijos, sou muito grata
+    por tudo que a senhora e o tio já fizeram por mim, espero dar muito orgulho ainda pra vocês. Amo imensamente os dois! 💖</p>
+    <a href="file:///C:/Users/luiza/OneDrive/Desktop/documentos/python/index.html#" class="button Tonho" data-message="Tonho">Tonho</a>
+    <p id="Tonho" class="message">🌸 Tonho, sua amizade e apoio significam muito para mim. Obrigada por tudo, saiba que pode contar comigo pro que precisar, te amo 
+    meu gurizinho, meu irmão do meio, meu branquelo, meu tudo! 💖</p>
+    <a href="file:///C:/Users/luiza/OneDrive/Desktop/documentos/python/index.html#" class="button Dudinha" data-message="Dudinha">Dudinha</a>
+    <p id="Dudinha" class="message">🌸Neguinha, sua doçura e carinho são incomparáveis. Sou grata por ter você na minha vida, te amo minha nega! 💖</p>
+    <a href="file:///C:/Users/luiza/OneDrive/Desktop/documentos/python/index.html#" class="button Carol" data-message="Carol">Carol</a>
+    <p id="Carol" class="message">🌸 Carol, não tenho palavras pra descrever o quanto te amo e agradeço por tudo que sempre fez por mim, desculpa se as vees te decepccionei, mas saiba que te amo incodicionalmente,
+    saiba que pode contar comigo pro que precisar. Amo muito você. Obrigada por tudo! 💖</p>
+    <p id="error-message" class="error" style="display: none;">Não valeeee</p>
+
+
+<script>
+    document.querySelectorAll('.button').forEach(button => {
+        button.addEventListener('click', function(event) {
+            event.preventDefault();
+            const messageId = this.getAttribute('data-message');
+            const visibleMessage = document.querySelector('.message[style*="display: block"]');
+            const errorMessage = document.getElementById('error-message');
+
+            if (visibleMessage && visibleMessage.id !== messageId) {
+                errorMessage.style.display = 'block';
+            } else {
+                if (visibleMessage) {
+                    visibleMessage.style.display = 'none';
+                }
+                document.getElementById(messageId).style.display = 'block';
+                errorMessage.style.display = 'none';
+            }
+        });
+    });
+</script>
+</body></html>
